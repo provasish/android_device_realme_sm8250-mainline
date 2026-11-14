@@ -18,6 +18,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 TARGET_BOOT_HAL := qcom-caf-aidl
 
+# Audio
+# The mainline audio HAL waits for an ALSA card that only appears once the
+# ADSP runs; without it, audioserver never finds IModule/default and
+# system_server restarts in a loop. default-aidl works without a sound card.
+# Switch back to mainline once the ADSP and the sound card work.
+TARGET_AUDIO_HAL := default-aidl
+
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
 

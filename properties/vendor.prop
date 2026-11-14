@@ -1,3 +1,8 @@
+# USB
+# Early adbd needs the init trigger based gadget control (sys.usb.configfs=1),
+# see device/mainline/common/docs/DEBUGGING.md.
+vendor.usb.configfs=1
+
 # Remoteproc
 # The kernel DTS keeps upstream-style firmware names; on Android the split
 # images are read from the mounted modem partition (see ueventd rc).

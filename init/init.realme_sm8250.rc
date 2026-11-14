@@ -5,6 +5,12 @@
 
 import /vendor/etc/init/hw/init.mainline.qcom.rc
 
+# USB controller (dwc3 of usb_1, usb@a600000 in sm8250.dtsi). The configfs
+# gadget scripts bind the gadget to ${sys.usb.controller}; with AOSP first
+# stage init (not generic_init) nothing else sets it.
+on early-init
+    setprop sys.usb.controller a600000.usb
+
 # Kernel module loading
 on post-fs
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -s -d /vendor/lib/modules --all=/vendor/etc/modules.load.normal

@@ -44,6 +44,15 @@ BOARD_KERNEL_CMDLINE := \
     console=tty0 \
     pd_ignore_unused
 
+# Bringup: adb without on-screen authorization, and early adbd.
+# device/mainline/common includes the optional board.mk fragments before it
+# assigns MAINLINE_COMMON_ANDROIDBOOT_PARAMS with :=, so the
+# androidboot.apex.early_adbd=true added by optional/early_adbd is lost.
+# Set it here until that is fixed upstream.
+BOARD_KERNEL_CMDLINE += \
+    androidboot.apex.early_adbd=true \
+    androidboot.insecure_adb=1
+
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true

@@ -67,7 +67,7 @@ What breaks it:
 
 | Path | Source |
 |------|--------|
-| `kernel/mainline/sm8250-mainline` | `https://gitlab.nura.eco/soc/qualcomm-sm8250/linux` (branch: `7.2.0-dev`) plus the realme device trees: `sm8250-realme-common.dtsi`, `sm8250-realme-overlay-sink.dtsi`, `sm8250-realme-spartan.dts`, `sm8250-realme-spartan-usbtest.dts`. TODO(maintainer): publish the fork and pin its branch here |
+| `kernel/mainline/sm8250-mainline` | `https://github.com/provasish/linux` (branch: `spartan-7.2`): `https://gitlab.nura.eco/soc/qualcomm-sm8250/linux` `7.2.0-dev`, the Android patches, and the realme device trees (`sm8250-realme-common.dtsi`, `sm8250-realme-overlay-sink.dtsi`, `sm8250-realme-spartan.dts`, `sm8250-realme-spartan-usbtest.dts`) |
 | `vendor/realme/sm8250-common`, `vendor/realme/spartan` | The vendor trees of the downstream LineageOS port (`extract-files.py` of the downstream device trees) |
 | `hardware/qcom-caf/bootctrl` | Needed by `TARGET_BOOT_HAL := qcom-caf-aidl`. TODO(maintainer): confirm the LineageOS manifest already provides it |
 

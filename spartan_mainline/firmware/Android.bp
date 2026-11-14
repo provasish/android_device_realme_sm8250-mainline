@@ -1,0 +1,20 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// The kernel DTS asks for qcom/sm8250/realme/spartan/<file> under
+// /vendor/firmware; the files themselves are installed in /odm.
+install_symlink {
+    name: "symlink_firmware_spartan",
+    vendor: true,
+    installed_location: "firmware/qcom/sm8250/realme/spartan",
+    symlink_target: "/odm/firmware/qcom/sm8250/realme/spartan",
+}
+
+phony {
+    name: "all_symlink_firmware_spartan",
+    required: [
+        "symlink_firmware_spartan",
+    ],
+}

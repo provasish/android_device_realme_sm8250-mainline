@@ -1,0 +1,6 @@
+# Remoteproc
+# The kernel DTS keeps upstream-style firmware names; on Android the split
+# images are read from the mounted modem partition (see ueventd rc).
+vendor.remoteproc.adsp.firmware=adsp.mdt
+vendor.remoteproc.cdsp.firmware=cdsp.mdt
+vendor.remoteproc.slpi.firmware=slpi.mdt

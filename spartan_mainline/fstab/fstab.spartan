@@ -1,0 +1,46 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Partition names follow the device's own GPT (RMX3371). boot, recovery,
+# dsp and modem exist as _a/_b copies; persist, metadata, misc and
+# userdata do not.
+
+# Boot
+/dev/block/by-name/boot /boot emmc defaults slotselect
+
+# DSP
+/dev/block/by-name/dsp /vendor/dsp ext4 ro,nosuid,nodev,barrier=1 slotselect
+
+# Firmware
+/dev/block/by-name/modem /vendor/firmware_mnt vfat ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_mnt_file:s0 slotselect
+
+# Logical partitions
+odm /odm ext4 noatime,ro logical,first_stage_mount,slotselect
+product /product ext4 noatime,ro logical,first_stage_mount,slotselect
+system /system ext4 noatime,ro logical,first_stage_mount,slotselect
+system_dlkm /system_dlkm ext4 noatime,ro logical,first_stage_mount,slotselect
+system_ext /system_ext ext4 noatime,ro logical,first_stage_mount,slotselect
+vendor /vendor ext4 noatime,ro logical,first_stage_mount,slotselect
+vendor_dlkm /vendor_dlkm ext4 noatime,ro logical,first_stage_mount,slotselect
+
+# Metadata
+/dev/block/by-name/metadata /metadata ext4 nodev,noatime,nosuid,discard,data=journal,commit=1 check,formattable,first_stage_mount,metadata_csum
+
+# Misc
+/dev/block/by-name/misc /misc emmc defaults defaults
+
+# Persist (Wi-Fi/BT/sensor calibration): read-only, qcom-common adds a
+# writable overlay on top of it.
+/dev/block/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,ro defaults
+
+# Recovery
+/dev/block/by-name/recovery /recovery emmc defaults slotselect
+
+# USB
+/devices/platform/soc@0/a6f8800.usb/*/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
+
+# Userdata
+/dev/block/by-name/userdata /data ext4 nodev,noatime,nosuid,discard latemount,check,quota,formattable
+/dev/block/by-name/userdata /data f2fs nodev,noatime,nosuid,discard,reserve_root=32768 latemount,check,quota,formattable

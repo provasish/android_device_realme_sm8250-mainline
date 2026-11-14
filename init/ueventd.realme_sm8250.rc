@@ -1,0 +1,9 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# The modem partition (mounted at /vendor/firmware_mnt) holds the split
+# adsp/cdsp/slpi/venus images in image/.
+firmware_directories /vendor/firmware_mnt/image/ /odm/firmware/
+modalias_handling enabled

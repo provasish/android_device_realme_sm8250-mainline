@@ -1,0 +1,24 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.realme_sm8250.rc",
+    src: "init.realme_sm8250.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.realme_sm8250.rc",
+    src: "init.recovery.realme_sm8250.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.realme_sm8250.rc",
+    src: "ueventd.realme_sm8250.rc",
+    vendor: true,
+}

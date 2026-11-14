@@ -1,0 +1,35 @@
+0:
+	CRM:		00:BOOT.XF.3.2-00358-SM8250-1
+	Variant:	Soc8250LAF
+	Version:	:dg02-pool06-kvm43
+1:
+	CRM:		01:TZ.XF.5.8-00274
+	Variant:	DARAANAAA
+	Version:	:CRM
+10:
+	CRM:		10:CP2A.260605.016:1794200016
+
+	Variant:	RE54E4L1-user
+
+	Version:	REL
+
+12:
+	CRM:		12:ADSP.HT.5.3-00614-SM8250-1
+	Variant:	8250.adsp.prodQ
+	Version:	:dg02-pool06-kvm43
+14:
+	CRM:		14:VIDEO.VPU.1.0-00113-PROD-1
+	Variant:	PROD
+	Version:	
+15:
+	CRM:		15:SLPI.HY.3.0-00262-SM8250AZL-1
+	Variant:	8250.slpi.prodQ
+	Version:	:dg02-pool06-kvm43
+16:
+	CRM:		16:CDSP.HT.2.3-00602-SM8250-1.592645.1.650842.1
+	Variant:	8250.cdsp.prodQ
+	Version:	:dg02-pool06-kvm43
+17:
+	CRM:		17:NPU.FW.2.0-00186-SM8250_NPU_PACK-1
+	Variant:	8250.npu.prodQ
+	Version:	:CRM

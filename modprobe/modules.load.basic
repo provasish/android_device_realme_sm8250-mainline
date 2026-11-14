@@ -1,0 +1,11 @@
+bq27xxx_battery_i2c.ko
+edt-ft5x06.ko
+gpi.ko
+i2c-qcom-geni.ko
+qcom-pon.ko
+qcom-rng.ko
+qcom-spmi-adc5.ko
+qcom-spmi-temp-alarm.ko
+qcom-wdt.ko
+rtc-pm8xxx.ko
+socinfo.ko

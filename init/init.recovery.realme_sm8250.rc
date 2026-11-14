@@ -1,0 +1,7 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# TODO(maintainer): set the backlight once a panel driver for the device
+# exists (the AMS662ZS01 has none in mainline yet).
